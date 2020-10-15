@@ -1,7 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System.Diagnostics;
+using MonoGame.Extended;
+using MonoGame.Extended.Entities;
+using MonoGame.Extended.Tiled;
+using MonoGame.Extended.Tiled.Renderers;
+using MonoGame.Extended.ViewportAdapters;
 
 namespace ZeldaClone
 {
@@ -14,6 +18,16 @@ namespace ZeldaClone
         private Vector2 characterPos;
 
         private Direction characterDirection = Direction.LEFT;
+
+        private TiledMap TMap;
+        private TiledMapRenderer MapRenderer;
+
+        private ViewportAdapter viewportAdapter;
+        private OrthographicCamera _camera;
+
+        public float scale = 0.44444f;
+
+        public World _world;
 
         private enum Direction
         {
@@ -30,7 +44,18 @@ namespace ZeldaClone
 
         protected override void Initialize()
         {
+            _graphics.PreferredBackBufferWidth = 1920;
+            _graphics.PreferredBackBufferHeight = 1200;
+            _graphics.ApplyChanges();
+
             // TODO: Add your initialization logic here
+            TMap = Content.Load<TiledMap>("Maps/TestMap02");
+            MapRenderer = new TiledMapRenderer(GraphicsDevice, TMap);
+
+            viewportAdapter = new BoxingViewportAdapter(Window, GraphicsDevice, 32*16, 18*16);
+            _camera = new OrthographicCamera(viewportAdapter);
+
+            Window.AllowUserResizing = true;
 
             base.Initialize();
         }
@@ -39,6 +64,9 @@ namespace ZeldaClone
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            _camera.LookAt(new Vector2(TMap.WidthInPixels, TMap.HeightInPixels) *0.5f);
+            _camera.Position = new Vector2(0, 0);
+
             // TODO: use this.Content to load your game content here
             character = Content.Load<Texture2D>("Art/Character/idle_1");
             characterPos = Vector2.Zero;
@@ -46,6 +74,9 @@ namespace ZeldaClone
 
         protected override void Update(GameTime gameTime)
         {
+            
+            MapRenderer.Update(gameTime);
+
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
@@ -54,21 +85,21 @@ namespace ZeldaClone
 
             if(inputState.IsKeyDown(Keys.A))
             {
-                characterPos.X -= 1;
+                characterPos.X -= 120 * (float)gameTime.ElapsedGameTime.TotalSeconds;
                 characterDirection = Direction.LEFT;
             }
             if(inputState.IsKeyDown(Keys.D))
             {
-                characterPos.X += 1;
+                characterPos.X += 120 * (float)gameTime.ElapsedGameTime.TotalSeconds;
                 characterDirection = Direction.RIGHT;
             }
             if(inputState.IsKeyDown(Keys.W))
             {
-                characterPos.Y -= 1;
+                characterPos.Y -= 120 * (float)gameTime.ElapsedGameTime.TotalSeconds;
             }
             if(inputState.IsKeyDown(Keys.S))
             {
-                characterPos.Y += 1;
+                characterPos.Y += 120 * (float)gameTime.ElapsedGameTime.TotalSeconds;
             }
 
             base.Update(gameTime);
@@ -77,13 +108,20 @@ namespace ZeldaClone
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            _spriteBatch.Begin();
 
+            var viewMatrix = _camera.GetViewMatrix();
+            var projectionMatrix = Matrix.CreateOrthographicOffCenter(0, GraphicsDevice.Viewport.Width-1, GraphicsDevice.Viewport.Height-1, 0, 0f, -1f);
+
+            //MapRenderer.Draw(null, null, null, 0f);
+            MapRenderer.Draw(viewMatrix, projectionMatrix, null, 0);
+
+            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            
             // TODO: Add your drawing code here
-            if(characterDirection == Direction.LEFT)
-                _spriteBatch.Draw(character, characterPos, Color.White);
+            if (characterDirection == Direction.LEFT)
+                _spriteBatch.Draw(character, characterPos, null, Color.White, 0f, Vector2.Zero, 1.25f, SpriteEffects.None, 0f);
             else if(characterDirection == Direction.RIGHT)
-                _spriteBatch.Draw(character, characterPos, null, Color.White, 0.0f, Vector2.Zero, 1.0f, SpriteEffects.FlipHorizontally, 0.0f);
+                _spriteBatch.Draw(character, characterPos, null, Color.White, 0f, Vector2.Zero, 1.25f, SpriteEffects.FlipHorizontally, 0f);
 
 
             _spriteBatch.End();

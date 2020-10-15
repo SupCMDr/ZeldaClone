@@ -29,3 +29,25 @@
 /processorParam:TextureFormat=Color
 /build:Art/Character/idle_1.png
 
+#begin Art/Tilesets/Overworld.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Art/Tilesets/Overworld.png
+
+#begin Maps/Overworld.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:Maps/Overworld.tsx
+
+#begin Maps/TestMap02.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:Maps/TestMap02.tmx
+
