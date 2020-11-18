@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended;
+using MonoGame.Extended.Collisions;
 using MonoGame.Extended.Entities;
 using MonoGame.Extended.Tiled;
 using MonoGame.Extended.Tiled.Renderers;
@@ -17,7 +18,7 @@ namespace ZeldaClone
         private Texture2D character;
         private Vector2 characterPos;
 
-        private Direction characterDirection = Direction.LEFT;
+        private Direction characterDirection = Direction.RIGHT;
 
         private TiledMap TMap;
         private TiledMapRenderer MapRenderer;
