@@ -10,10 +10,10 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:C:\Users\Nikkxi\.nuget\packages\monogame.extended.content.pipeline\3.8.0\tools\MonoGame.Extended.Content.Pipeline.dll
-/reference:C:\Users\Nikkxi\.nuget\packages\monogame.extended.tiled\3.8.0\lib\netstandard2.0\MonoGame.Extended.Tiled.dll
-/reference:C:\Users\Nikkxi\.nuget\packages\monogame.extended.graphics\3.8.0\lib\netstandard2.0\MonoGame.Extended.Graphics.dll
-/reference:C:\Users\Nikkxi\.nuget\packages\monogame.extended\3.8.0\lib\netstandard2.0\MonoGame.Extended.dll
+/reference:C:\Users\lewan\.nuget\packages\monogame.extended.content.pipeline\3.8.0\tools\MonoGame.Extended.Content.Pipeline.dll
+/reference:C:\Users\lewan\.nuget\packages\monogame.extended.tiled\3.8.0\lib\netstandard2.0\MonoGame.Extended.Tiled.dll
+/reference:C:\Users\lewan\.nuget\packages\monogame.extended.graphics\3.8.0\lib\netstandard2.0\MonoGame.Extended.Graphics.dll
+/reference:C:\Users\lewan\.nuget\packages\monogame.extended\3.8.0\lib\netstandard2.0\MonoGame.Extended.dll
 
 #---------------------------------- Content ---------------------------------#
 

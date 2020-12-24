@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended;
+using MonoGame.Extended.Collisions;
 using MonoGame.Extended.Entities;
 using MonoGame.Extended.Tiled;
 using MonoGame.Extended.Tiled.Renderers;
@@ -17,7 +18,7 @@ namespace ZeldaClone
         private Texture2D character;
         private Vector2 characterPos;
 
-        private Direction characterDirection = Direction.LEFT;
+        private Direction characterDirection = Direction.RIGHT;
 
         private TiledMap TMap;
         private TiledMapRenderer MapRenderer;
@@ -46,6 +47,7 @@ namespace ZeldaClone
         {
             _graphics.PreferredBackBufferWidth = 1920;
             _graphics.PreferredBackBufferHeight = 1200;
+            _graphics.IsFullScreen = true;
             _graphics.ApplyChanges();
 
             // TODO: Add your initialization logic here
@@ -83,21 +85,25 @@ namespace ZeldaClone
             // TODO: Add your update logic here
             KeyboardState inputState = Keyboard.GetState();
 
-            if(inputState.IsKeyDown(Keys.A))
+            // LEFT
+            if(inputState.IsKeyDown(Keys.A) || inputState.IsKeyDown(Keys.Left))
             {
                 characterPos.X -= 120 * (float)gameTime.ElapsedGameTime.TotalSeconds;
                 characterDirection = Direction.LEFT;
             }
-            if(inputState.IsKeyDown(Keys.D))
+            // RIGHT
+            if(inputState.IsKeyDown(Keys.D) || inputState.IsKeyDown(Keys.Right))
             {
                 characterPos.X += 120 * (float)gameTime.ElapsedGameTime.TotalSeconds;
                 characterDirection = Direction.RIGHT;
             }
-            if(inputState.IsKeyDown(Keys.W))
+            // UP
+            if(inputState.IsKeyDown(Keys.W) || inputState.IsKeyDown(Keys.Up))
             {
                 characterPos.Y -= 120 * (float)gameTime.ElapsedGameTime.TotalSeconds;
             }
-            if(inputState.IsKeyDown(Keys.S))
+            // DOWN
+            if(inputState.IsKeyDown(Keys.S) || inputState.IsKeyDown(Keys.Down))
             {
                 characterPos.Y += 120 * (float)gameTime.ElapsedGameTime.TotalSeconds;
             }
@@ -123,6 +129,7 @@ namespace ZeldaClone
             else if(characterDirection == Direction.RIGHT)
                 _spriteBatch.Draw(character, characterPos, null, Color.White, 0f, Vector2.Zero, 1.25f, SpriteEffects.FlipHorizontally, 0f);
 
+            
 
             _spriteBatch.End();
 

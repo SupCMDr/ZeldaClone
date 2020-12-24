@@ -1,49 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="19" nextobjectid="30">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="21" nextobjectid="30">
  <tileset firstgid="1" name="Overworld" tilewidth="16" tileheight="16" tilecount="1440" columns="40">
   <image source="../Art/Tilesets/Overworld.png" width="640" height="576"/>
-  <tile id="16">
+  <tile id="16" type="water">
    <animation>
     <frame tileid="16" duration="150"/>
     <frame tileid="18" duration="150"/>
     <frame tileid="20" duration="150"/>
    </animation>
   </tile>
-  <tile id="17">
+  <tile id="17" type="water">
    <animation>
     <frame tileid="17" duration="150"/>
     <frame tileid="19" duration="150"/>
     <frame tileid="21" duration="150"/>
    </animation>
   </tile>
+  <tile id="18" type="water"/>
+  <tile id="19" type="water"/>
+  <tile id="20" type="water"/>
+  <tile id="21" type="water"/>
   <tile id="22">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="5" height="16"/>
-    <object id="2" x="5" y="0" width="11" height="6"/>
+    <object id="3" x="16" y="6">
+     <polygon points="0,0 -11,0 -11,10 -16,10 -16,-6 0,-6"/>
+    </object>
    </objectgroup>
   </tile>
   <tile id="23">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="16" height="6"/>
    </objectgroup>
   </tile>
   <tile id="24">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="11" height="6"/>
-    <object id="2" x="11" y="0" width="5" height="16"/>
+    <object id="3" x="16" y="0">
+     <polygon points="0,0 -16,0 -16,6 -5,6 -5,16 0,16"/>
+    </object>
    </objectgroup>
   </tile>
+  <tile id="25" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
   <tile id="28">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="11" y="11" width="5" height="5"/>
    </objectgroup>
   </tile>
   <tile id="29">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="11" width="5" height="5"/>
    </objectgroup>
   </tile>
-  <tile id="40">
+  <tile id="40" type="water">
    <animation>
     <frame tileid="40" duration="150"/>
     <frame tileid="41" duration="150"/>
@@ -55,139 +81,233 @@
     <frame tileid="83" duration="150"/>
    </animation>
   </tile>
-  <tile id="56">
+  <tile id="41" type="water"/>
+  <tile id="42" type="water"/>
+  <tile id="43" type="water"/>
+  <tile id="56" type="water">
    <animation>
     <frame tileid="56" duration="150"/>
     <frame tileid="58" duration="150"/>
     <frame tileid="60" duration="150"/>
    </animation>
   </tile>
-  <tile id="57">
+  <tile id="57" type="water">
    <animation>
     <frame tileid="57" duration="150"/>
     <frame tileid="59" duration="150"/>
     <frame tileid="61" duration="150"/>
    </animation>
   </tile>
+  <tile id="58" type="water"/>
+  <tile id="59" type="water"/>
+  <tile id="60" type="water"/>
+  <tile id="61" type="water"/>
   <tile id="62">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="5" height="16"/>
    </objectgroup>
   </tile>
   <tile id="64">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="11" y="0" width="5" height="16"/>
    </objectgroup>
   </tile>
+  <tile id="65" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
   <tile id="68">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="11" y="0" width="5" height="7"/>
    </objectgroup>
   </tile>
   <tile id="69">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="5" height="7"/>
    </objectgroup>
   </tile>
+  <tile id="80" type="water"/>
+  <tile id="81" type="water"/>
+  <tile id="82" type="water"/>
+  <tile id="83" type="water"/>
   <tile id="86">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="7" y="0" width="9" height="16"/>
    </objectgroup>
   </tile>
   <tile id="90">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="9" height="16"/>
    </objectgroup>
   </tile>
   <tile id="91">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="7" y="0" width="9" height="16"/>
    </objectgroup>
   </tile>
   <tile id="95">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="7" y="0" width="9" height="16"/>
    </objectgroup>
   </tile>
-  <tile id="96">
+  <tile id="96" type="water">
    <animation>
     <frame tileid="96" duration="150"/>
     <frame tileid="98" duration="150"/>
     <frame tileid="100" duration="150"/>
    </animation>
   </tile>
-  <tile id="97">
+  <tile id="97" type="water">
    <animation>
     <frame tileid="97" duration="150"/>
     <frame tileid="99" duration="150"/>
     <frame tileid="101" duration="150"/>
    </animation>
   </tile>
+  <tile id="98" type="water"/>
+  <tile id="99" type="water"/>
+  <tile id="100" type="water"/>
+  <tile id="101" type="water"/>
   <tile id="102">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="5" height="16"/>
-    <object id="2" x="5" y="11" width="11" height="5"/>
+    <object id="3" x="5" y="0">
+     <polygon points="0,0 0,11 11,11 11,16 -5,16 -5,0"/>
+    </object>
    </objectgroup>
   </tile>
   <tile id="103">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="11" width="16" height="5"/>
    </objectgroup>
   </tile>
   <tile id="104">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" x="11" y="0" width="5" height="16"/>
-    <object id="2" x="0" y="11" width="11" height="5"/>
+    <object id="3" x="11" y="0">
+     <polygon points="0,0 0,11 -11,11 -11,16 5,16 5,0"/>
+    </object>
    </objectgroup>
   </tile>
+  <tile id="105" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
   <tile id="110">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="5" height="7"/>
     <object id="2" x="11" y="11" width="5" height="5"/>
    </objectgroup>
   </tile>
-  <tile id="123">
+  <tile id="123" type="water">
    <animation>
     <frame tileid="123" duration="150"/>
     <frame tileid="124" duration="150"/>
     <frame tileid="125" duration="150"/>
    </animation>
   </tile>
+  <tile id="124" type="water"/>
+  <tile id="125" type="water"/>
   <tile id="126">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="7" y="0" width="9" height="16"/>
    </objectgroup>
   </tile>
+  <tile id="128" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
   <tile id="130">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="9" height="16"/>
    </objectgroup>
   </tile>
   <tile id="131">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="7" y="0" width="9" height="16"/>
    </objectgroup>
   </tile>
   <tile id="135">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="9" height="16"/>
    </objectgroup>
   </tile>
-  <tile id="136">
+  <tile id="136" type="water">
    <animation>
     <frame tileid="136" duration="150"/>
     <frame tileid="138" duration="150"/>
     <frame tileid="140" duration="150"/>
    </animation>
   </tile>
-  <tile id="137">
+  <tile id="137" type="water">
    <animation>
     <frame tileid="137" duration="150"/>
     <frame tileid="139" duration="150"/>
     <frame tileid="141" duration="150"/>
    </animation>
   </tile>
+  <tile id="138" type="water"/>
+  <tile id="139" type="water"/>
+  <tile id="140" type="water"/>
+  <tile id="141" type="water"/>
+  <tile id="145" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
   <tile id="150">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="11" y="0" width="5" height="7"/>
     <object id="2" x="0" y="11" width="5" height="5"/>
@@ -207,14 +327,39 @@
     </object>
    </objectgroup>
   </tile>
-  <tile id="163">
+  <tile id="153" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="154" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="155" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="156" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="163" type="water">
    <animation>
     <frame tileid="163" duration="150"/>
     <frame tileid="164" duration="150"/>
     <frame tileid="165" duration="150"/>
    </animation>
   </tile>
+  <tile id="164" type="water"/>
+  <tile id="165" type="water"/>
   <tile id="166">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="7" y="0" width="9" height="12"/>
    </objectgroup>
@@ -224,17 +369,28 @@
     <object id="1" x="0" y="0" width="16" height="12"/>
    </objectgroup>
   </tile>
+  <tile id="168" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
   <tile id="169">
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="16" height="12"/>
    </objectgroup>
   </tile>
   <tile id="170">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="9" height="12"/>
    </objectgroup>
   </tile>
   <tile id="171">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="7" y="0" width="9" height="12"/>
    </objectgroup>
@@ -255,193 +411,339 @@
    </objectgroup>
   </tile>
   <tile id="175">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="9" height="12"/>
    </objectgroup>
   </tile>
+  <tile id="176" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="177" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="178" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="179" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="180" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="193" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="194" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="195" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="196" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="216" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="217" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="218" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="219" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="220" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="231" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="232" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="233" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="234" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
   <tile id="245">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="11" y="7" width="5" height="9"/>
    </objectgroup>
   </tile>
   <tile id="247">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="7" width="5" height="9"/>
    </objectgroup>
   </tile>
   <tile id="248">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="8" y="15" width="8" height="1"/>
    </objectgroup>
   </tile>
   <tile id="249">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="15" width="16" height="1"/>
    </objectgroup>
   </tile>
   <tile id="250">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="15" width="8" height="1"/>
    </objectgroup>
   </tile>
-  <tile id="258">
+  <tile id="258" type="water">
    <animation>
     <frame tileid="258" duration="100"/>
     <frame tileid="259" duration="100"/>
     <frame tileid="260" duration="100"/>
    </animation>
   </tile>
-  <tile id="259">
+  <tile id="259" type="water">
    <animation>
     <frame tileid="259" duration="100"/>
     <frame tileid="260" duration="100"/>
     <frame tileid="258" duration="100"/>
    </animation>
   </tile>
-  <tile id="260">
+  <tile id="260" type="water">
    <animation>
     <frame tileid="260" duration="100"/>
     <frame tileid="258" duration="100"/>
     <frame tileid="259" duration="100"/>
    </animation>
+  </tile>
+  <tile id="271" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="272" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="273" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="274" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
   </tile>
   <tile id="285">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="13" y="0" width="3" height="16"/>
    </objectgroup>
   </tile>
   <tile id="287">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="3" height="16"/>
    </objectgroup>
   </tile>
   <tile id="293">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="4" y="0" width="12" height="14"/>
    </objectgroup>
   </tile>
   <tile id="294">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="12" height="14"/>
    </objectgroup>
   </tile>
-  <tile id="298">
+  <tile id="298" type="water">
    <animation>
     <frame tileid="298" duration="100"/>
     <frame tileid="299" duration="100"/>
     <frame tileid="300" duration="100"/>
    </animation>
   </tile>
-  <tile id="299">
+  <tile id="299" type="water">
    <animation>
     <frame tileid="299" duration="100"/>
     <frame tileid="300" duration="100"/>
     <frame tileid="298" duration="100"/>
    </animation>
   </tile>
-  <tile id="300">
+  <tile id="300" type="water">
    <animation>
     <frame tileid="300" duration="100"/>
     <frame tileid="298" duration="100"/>
     <frame tileid="299" duration="100"/>
    </animation>
+  </tile>
+  <tile id="305" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
   </tile>
   <tile id="325">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="11" y="0" width="5" height="8"/>
    </objectgroup>
   </tile>
   <tile id="327">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="5" height="8"/>
    </objectgroup>
   </tile>
   <tile id="328">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="9" y="0" width="7" height="3"/>
    </objectgroup>
   </tile>
   <tile id="329">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="16" height="3"/>
    </objectgroup>
   </tile>
   <tile id="330">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="7" height="3"/>
    </objectgroup>
   </tile>
-  <tile id="338">
+  <tile id="338" type="water">
    <animation>
     <frame tileid="338" duration="100"/>
     <frame tileid="339" duration="100"/>
     <frame tileid="340" duration="100"/>
    </animation>
   </tile>
-  <tile id="339">
+  <tile id="339" type="water">
    <animation>
     <frame tileid="339" duration="100"/>
     <frame tileid="340" duration="100"/>
     <frame tileid="338" duration="100"/>
    </animation>
   </tile>
-  <tile id="340">
+  <tile id="340" type="water">
    <animation>
     <frame tileid="340" duration="100"/>
     <frame tileid="338" duration="100"/>
     <frame tileid="339" duration="100"/>
    </animation>
   </tile>
-  <tile id="351">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="16" y="0">
-     <polygon points="0,0 -9,8 0,12"/>
-    </object>
-    <object id="2" x="16" y="0">
-     <polygon points="0,0 -16,0 -9,8"/>
-    </object>
-   </objectgroup>
-  </tile>
-  <tile id="352">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="16" height="13"/>
-   </objectgroup>
-  </tile>
-  <tile id="353">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0">
-     <polygon points="0,0 8,8 15,0"/>
-    </object>
-    <object id="2" x="0" y="0">
-     <polygon points="0,0 8,8 0,12"/>
-    </object>
-   </objectgroup>
+  <tile id="345" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
   </tile>
   <tile id="364">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="4" width="3" height="12"/>
    </objectgroup>
   </tile>
   <tile id="366">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="13" y="4" width="3" height="12"/>
    </objectgroup>
   </tile>
-  <tile id="377">
+  <tile id="377" type="water">
    <animation>
     <frame tileid="377" duration="100"/>
     <frame tileid="417" duration="100"/>
     <frame tileid="458" duration="100"/>
    </animation>
   </tile>
-  <tile id="378">
+  <tile id="378" type="water">
    <animation>
     <frame tileid="378" duration="100"/>
     <frame tileid="418" duration="100"/>
     <frame tileid="459" duration="100"/>
    </animation>
   </tile>
-  <tile id="379">
+  <tile id="379" type="water">
    <animation>
     <frame tileid="379" duration="100"/>
     <frame tileid="419" duration="100"/>
@@ -449,14 +751,6 @@
    </animation>
   </tile>
   <tile id="382">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="16" y="16">
-     <polygon points="0,0 -10,-10 0,-15"/>
-    </object>
-    <object id="2" x="16" y="16">
-     <polygon points="0,0 -16,0 -10,-10"/>
-    </object>
-   </objectgroup>
    <animation>
     <frame tileid="382" duration="150"/>
     <frame tileid="385" duration="150"/>
@@ -471,29 +765,11 @@
    </animation>
   </tile>
   <tile id="384">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="16">
-     <polygon points="0,0 10,-10 16,0"/>
-    </object>
-    <object id="2" x="0" y="16">
-     <polygon points="0,0 0,-16 10,-10"/>
-    </object>
-   </objectgroup>
    <animation>
     <frame tileid="384" duration="150"/>
     <frame tileid="387" duration="150"/>
     <frame tileid="390" duration="150"/>
    </animation>
-  </tile>
-  <tile id="385">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="16" y="16">
-     <polygon points="0,0 -10,-10 0,-15"/>
-    </object>
-    <object id="2" x="16" y="16">
-     <polygon points="0,0 -16,0 -10,-10"/>
-    </object>
-   </objectgroup>
   </tile>
   <tile id="387">
    <objectgroup draworder="index" id="2">
@@ -505,36 +781,25 @@
     </object>
    </objectgroup>
   </tile>
-  <tile id="388">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="16" y="16">
-     <polygon points="0,0 -10,-10 0,-15"/>
-    </object>
-    <object id="2" x="16" y="16">
-     <polygon points="0,0 -16,0 -10,-10"/>
-    </object>
-   </objectgroup>
-  </tile>
-  <tile id="390">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="16">
-     <polygon points="0,0 10,-10 16,0"/>
-    </object>
-    <object id="2" x="0" y="16">
-     <polygon points="0,0 0,-16 10,-10"/>
-    </object>
-   </objectgroup>
-  </tile>
   <tile id="404">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="3" height="16"/>
    </objectgroup>
   </tile>
   <tile id="406">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="13" y="0" width="3" height="16"/>
    </objectgroup>
   </tile>
+  <tile id="417" type="water"/>
+  <tile id="418" type="water"/>
+  <tile id="419" type="water"/>
   <tile id="422">
    <animation>
     <frame tileid="422" duration="150"/>
@@ -557,20 +822,31 @@
    </animation>
   </tile>
   <tile id="444">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="3" height="16"/>
-    <object id="2" x="3" y="13" width="13" height="3"/>
+    <object id="3" x="0" y="0">
+     <polygon points="0,0 3,0 3,13 16,13 16,16 0,16"/>
+    </object>
    </objectgroup>
   </tile>
   <tile id="445">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="13" width="16" height="3"/>
    </objectgroup>
   </tile>
   <tile id="446">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="13" width="13" height="3"/>
-    <object id="2" x="13" y="0" width="3" height="16"/>
+    <object id="4" x="16" y="0">
+     <polygon points="0,0 -3,0 -3,13 -16,13 -16,16 0,16"/>
+    </object>
    </objectgroup>
   </tile>
   <tile id="449">
@@ -583,79 +859,48 @@
     <object id="2" x="0" y="6" width="16" height="10"/>
    </objectgroup>
   </tile>
-  <tile id="462">
-   <objectgroup draworder="index" id="3">
-    <object id="3" x="16" y="0">
-     <polygon points="0,0 -9,8 0,12"/>
-    </object>
-    <object id="4" x="16" y="0">
-     <polygon points="0,0 -16,0 -9,8"/>
-    </object>
-   </objectgroup>
+  <tile id="458" type="water"/>
+  <tile id="459" type="water"/>
+  <tile id="460" type="water"/>
+  <tile id="487" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
   </tile>
-  <tile id="463">
-   <objectgroup draworder="index" id="3">
-    <object id="3" x="0" y="0" width="16" height="13"/>
-   </objectgroup>
-  </tile>
-  <tile id="464">
+  <tile id="680">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0">
-     <polygon points="0,0 8,8 15,0"/>
-    </object>
-    <object id="2" x="0" y="0">
-     <polygon points="0,0 8,8 0,12"/>
+    <object id="1" x="6" y="2" width="4" height="14"/>
+   </objectgroup>
+  </tile>
+  <tile id="682">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="5" y="16">
+     <polygon points="0,0 0,-10 11,-10 11,-1 6,-1 6,0"/>
     </object>
    </objectgroup>
   </tile>
-  <tile id="465">
+  <tile id="683">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" x="16" y="0">
-     <polygon points="0,0 -9,8 0,12"/>
-    </object>
-    <object id="2" x="16" y="0">
-     <polygon points="0,0 -16,0 -9,8"/>
+    <object id="1" x="11" y="16">
+     <polygon points="0,0 0,-10 -11,-10 -11,-1 -6,-1 -6,0"/>
     </object>
    </objectgroup>
   </tile>
-  <tile id="466">
+  <tile id="684">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="16" height="13"/>
-   </objectgroup>
-  </tile>
-  <tile id="467">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0">
-     <polygon points="0,0 8,8 15,0"/>
-    </object>
-    <object id="2" x="0" y="0">
-     <polygon points="0,0 8,8 0,12"/>
-    </object>
-   </objectgroup>
-  </tile>
-  <tile id="468">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="16" y="0">
-     <polygon points="0,0 -9,8 0,12"/>
-    </object>
-    <object id="2" x="16" y="0">
-     <polygon points="0,0 -16,0 -9,8"/>
-    </object>
-   </objectgroup>
-  </tile>
-  <tile id="469">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="16" height="13"/>
-   </objectgroup>
-  </tile>
-  <tile id="470">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0">
-     <polygon points="0,0 8,8 15,0"/>
-    </object>
-    <object id="2" x="0" y="0">
-     <polygon points="0,0 8,8 0,12"/>
-    </object>
+    <object id="1" x="0" y="6" width="16" height="9"/>
    </objectgroup>
   </tile>
   <tile id="685">
@@ -673,81 +918,303 @@
    </objectgroup>
   </tile>
   <tile id="689">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="13" y="0" width="3" height="16"/>
     <object id="2" x="0" y="13" width="13" height="3"/>
    </objectgroup>
   </tile>
   <tile id="690">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="3" height="16"/>
     <object id="2" x="3" y="13" width="13" height="3"/>
    </objectgroup>
   </tile>
-  <tile id="945">
+  <tile id="720">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" x="10" y="0" width="6" height="16"/>
+    <object id="1" x="6" y="0" width="4" height="14"/>
+   </objectgroup>
+  </tile>
+  <tile id="722">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="5" y="0">
+     <polygon points="0,0 0,15 11,15 11,6 6,6 6,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="723">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="11" y="14">
+     <polygon points="0,1 0,-14 -6,-14 -6,-8 -11,-8 -11,1"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="724">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="6" y="0" width="4" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="760">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="5" y="6" width="11" height="8"/>
+   </objectgroup>
+  </tile>
+  <tile id="761">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="4" x="0" y="6" width="11" height="8"/>
+   </objectgroup>
+  </tile>
+  <tile id="888">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="7" height="7"/>
+   </objectgroup>
+  </tile>
+  <tile id="889">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="9" y="0" width="7" height="7"/>
+   </objectgroup>
+  </tile>
+  <tile id="905">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="906">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="908">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="909">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="928">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="11" width="7" height="5"/>
+   </objectgroup>
+  </tile>
+  <tile id="929">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="9" y="11" width="7" height="5"/>
+   </objectgroup>
+  </tile>
+  <tile id="945">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="10" y="0" width="6" height="6"/>
    </objectgroup>
   </tile>
   <tile id="946">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="16" height="6"/>
    </objectgroup>
   </tile>
   <tile id="947">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="16" height="6"/>
    </objectgroup>
   </tile>
   <tile id="948">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="16" height="6"/>
    </objectgroup>
   </tile>
   <tile id="949">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="6" height="16"/>
+    <object id="1" x="0" y="0" width="6" height="6"/>
+   </objectgroup>
+  </tile>
+  <tile id="968">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="5" height="11"/>
+   </objectgroup>
+  </tile>
+  <tile id="969">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="11" y="0" width="5" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="1008">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="9" width="5" height="7"/>
+   </objectgroup>
+  </tile>
+  <tile id="1009">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="11" y="9" width="5" height="7"/>
+   </objectgroup>
+  </tile>
+  <tile id="1025">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="10" y="11" width="6" height="5"/>
    </objectgroup>
   </tile>
   <tile id="1026">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="2" x="0" y="11" width="16" height="5"/>
    </objectgroup>
   </tile>
   <tile id="1027">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="11" width="16" height="5"/>
    </objectgroup>
   </tile>
   <tile id="1028">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="11" width="16" height="5"/>
    </objectgroup>
   </tile>
+  <tile id="1029">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="11" width="6" height="5"/>
+   </objectgroup>
+  </tile>
   <tile id="1065">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="10" y="0" width="6" height="16"/>
    </objectgroup>
   </tile>
   <tile id="1069">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="6" height="16"/>
    </objectgroup>
   </tile>
+  <tile id="1087" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1088" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1127" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1128" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
   <tile id="1139">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="10" y="9" width="6" height="7"/>
    </objectgroup>
   </tile>
   <tile id="1140">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="9" width="6" height="7"/>
    </objectgroup>
   </tile>
   <tile id="1142">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="10" y="9" width="6" height="7"/>
    </objectgroup>
+  </tile>
+  <tile id="1143">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
   </tile>
   <tile id="1163">
    <animation>
@@ -767,15 +1234,31 @@
     <frame tileid="1172" duration="150"/>
    </animation>
   </tile>
+  <tile id="1179">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+  </tile>
   <tile id="1180">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="6" height="16"/>
    </objectgroup>
   </tile>
   <tile id="1182">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="10" y="0" width="6" height="16"/>
    </objectgroup>
+  </tile>
+  <tile id="1183">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
   </tile>
   <tile id="1203">
    <animation>
@@ -795,52 +1278,242 @@
     <frame tileid="1212" duration="150"/>
    </animation>
   </tile>
+  <tile id="1219">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+  </tile>
   <tile id="1220">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="6" height="16"/>
    </objectgroup>
   </tile>
   <tile id="1222">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="10" y="0" width="6" height="16"/>
    </objectgroup>
   </tile>
+  <tile id="1223">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1250" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1251" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1252" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1253" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1259">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+  </tile>
   <tile id="1260">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="6" height="16"/>
    </objectgroup>
   </tile>
   <tile id="1262">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="10" y="0" width="6" height="16"/>
    </objectgroup>
   </tile>
+  <tile id="1263">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1264" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1265" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1266" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1267" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1285" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="1286" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="1290" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1291" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1292" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1293" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
   <tile id="1299">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="10" y="0" width="6" height="16"/>
    </objectgroup>
   </tile>
   <tile id="1300">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="6" height="16"/>
    </objectgroup>
   </tile>
   <tile id="1302">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="10" y="0" width="6" height="16"/>
    </objectgroup>
   </tile>
   <tile id="1303">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="6" height="16"/>
    </objectgroup>
   </tile>
-  <tile id="1344">
+  <tile id="1304" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1305" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1306" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1307" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1325" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="1326" type="door">
+   <properties>
+    <property name="opened" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="1330" type="door">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="8" y="0" width="4" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="1331" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1332" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1333" type="door">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="4" y="0" width="4" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="1344" type="door">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="8" y="0" width="4" height="16"/>
    </objectgroup>
   </tile>
-  <tile id="1347">
+  <tile id="1345" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1346" type="door">
+   <properties>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1347" type="door">
+   <properties>
+    <property name="has_bounding_box" type="bool" value="true"/>
+    <property name="opened" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="4" y="0" width="4" height="16"/>
    </objectgroup>
@@ -851,7 +1524,7 @@
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,161,162,163,1,1,1,283,259,260,259,260,261,285,1,
 446,446,446,446,446,446,446,446,446,446,446,446,446,446,446,446,446,446,446,446,446,446,446,446,690,299,300,299,300,301,691,446,
 805,805,805,805,805,805,805,805,805,805,805,805,805,805,805,805,805,805,805,805,805,805,805,805,806,339,340,339,340,341,804,805,
-284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,378,379,379,379,379,379,380,284,
+284,164,284,284,124,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,284,378,379,379,379,379,379,380,284,
 442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,442,
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,161,162,163,1,1,1,1,1,1,1,1,1,1,1,
 122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,282,162,281,122,122,122,122,122,122,122,122,122,122,122,
@@ -868,12 +1541,34 @@
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,161,162,163,1,1,1,1,1,1,1,1,1,1,1
 </data>
  </layer>
- <layer id="18" name="Ground 2" width="32" height="18">
+ <layer id="19" name="Ground 2" width="32" height="18">
+  <data encoding="csv">
+0,0,0,0,0,0,483,0,0,0,0,0,0,0,0,0,0,0,0,1142,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1182,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1222,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1262,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1302,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,483,0,0,0,0,0,0,0,321,0,0,0,0,322,0,0,0,0,0,0,0,0,0,0,444,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,321,0,0,0,0,444,0,0,0,483,0,0,0,0,0,0,0,0,0,0,0,483,444,0,0,0,0,0,0,0,
+483,0,0,0,0,0,0,0,0,0,0,0,0,0,0,444,0,0,0,0,0,0,321,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,321,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,321,0,0,322,0,0,0,0,444,444,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,321,0,0,0,0,0,0,0,0,0,
+0,0,0,483,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,321,0,0,0,0,322,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,321,0,
+0,0,0,0,0,0,0,0,0,483,0,0,0,0,0,483,322,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="18" name="Ground Collidable 1" width="32" height="18">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,164,0,0,124,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,415,0,0,0,415,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -890,26 +1585,26 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="11" name="Ground 3" width="32" height="18">
+ <layer id="11" name="Ground Collidable 2" width="32" height="18">
   <data encoding="csv">
-0,0,0,0,0,0,483,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1140,1141,0,1143,1144,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1180,1181,0,1183,1184,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1220,1221,0,1223,1224,0,0,0,0,0,0,0,0,0,0,
+0,415,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1260,1261,0,1263,1264,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1300,1301,0,1303,1304,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,415,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,415,0,0,0,415,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,483,0,0,0,0,0,0,0,321,0,0,0,0,322,0,0,0,0,0,0,0,0,0,0,444,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,321,0,0,0,0,444,0,0,0,483,0,0,0,0,0,0,0,0,0,0,0,483,444,0,0,0,0,0,0,0,
-483,0,0,0,0,0,0,0,0,0,0,0,0,152,153,444,0,0,0,0,0,0,321,0,0,0,0,0,0,0,0,0,
-0,152,153,0,0,0,0,321,0,0,204,205,206,192,193,0,0,0,0,0,0,0,0,0,641,642,0,0,0,641,642,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,152,153,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,152,153,0,0,0,0,0,0,0,204,205,206,192,193,0,0,0,0,0,0,0,0,0,641,642,0,0,0,641,642,0,
 0,192,193,204,205,206,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,152,153,0,0,0,0,321,0,0,322,0,0,0,0,444,444,0,0,0,0,0,0,0,0,
-0,0,0,0,0,204,205,206,192,193,0,0,0,0,0,0,0,0,0,0,0,0,321,0,0,0,0,0,0,0,0,0,
-0,0,0,483,0,0,0,0,0,0,0,0,0,152,153,0,0,0,0,0,0,0,0,686,687,0,0,0,0,0,686,687,
-0,321,0,0,0,0,322,0,0,0,204,205,206,192,193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,321,0,
-0,0,0,0,0,0,0,0,0,483,0,0,0,0,0,483,322,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,152,153,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,204,205,206,192,193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,152,153,0,0,0,0,0,0,0,0,686,687,0,0,0,0,0,686,687,
+0,0,0,0,0,0,0,0,0,0,204,205,206,192,193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
  <layer id="12" name="Front Or Back" width="32" height="18">
@@ -936,11 +1631,11 @@
  </layer>
  <layer id="13" name="Above 1" width="32" height="18">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1140,1141,1142,1143,1144,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1180,1181,1182,1183,1184,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1220,1221,1222,1223,1224,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1260,1261,1262,1263,1264,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1300,1301,1302,1303,1304,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,13,14,15,16,0,0,
@@ -951,72 +1646,6 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,646,647,0,0,0,0,0,646,647,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
- <layer id="14" name="Above 2" width="32" height="18">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
- <layer id="15" name="Above 3" width="32" height="18">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
- <layer id="16" name="Collision" width="32" height="18">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
